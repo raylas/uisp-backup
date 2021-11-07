@@ -1,0 +1,12 @@
+version: '3.4'
+
+services:
+  uisp-backup:
+    build:
+      context: .
+    environment:
+      UISP_DOMAIN: https://unms.example.com
+      UISP_API_TOKEN: 3cbaab95-7b82-4ebb-77gf-f326688fbb85
+    volumes:
+    - /etc/localtime:/etc/localtime:ro
+    - ./backups:/backups
